@@ -8,6 +8,7 @@ USERID=$(id -u) # (id -u) -> this command will give user id, If user id 0 he is 
 if [ $USERID -ne 0 ]
 then 
     echo "ERROR:: You must have sudo access to execute this script"
+    exit 1
 fi
 
 # mysql Package Installition Process
