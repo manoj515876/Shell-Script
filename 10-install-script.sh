@@ -27,6 +27,7 @@ then
     fi
 else 
     echo "MySQL already Installed ..."
+fi
 
 
 # Git Package Installition Process
@@ -45,3 +46,4 @@ then
     fi
 else
     echo "Git already Installed ..."
+fi
