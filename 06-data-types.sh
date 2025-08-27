@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 TIMESTAMP=$(date)
-echo "Script excueted at $(TIMESTAMP)"
+echo "Script excueted at ${TIMESTAMP}"
 
 NUMBER1=$1
 NUMBER2=$2
