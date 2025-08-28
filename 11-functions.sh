@@ -22,6 +22,7 @@ then
     fi
 else 
     echo "MySQL already Installed ..."
+fi
 
 
 dnf list installed git
