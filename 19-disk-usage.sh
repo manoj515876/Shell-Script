@@ -10,7 +10,7 @@ do
     PARTITION=$(echo $line | awk -F " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then 
-        MSG+=$(echo "PARTITION : ${PARTITION} , USAGE: ${USAGE}")
+        MSG+=$(echo "PARTITION : ${PARTITION} , USAGE: ${USAGE} <br> ")
     fi
 done <<< $DISK_USAGE
 
