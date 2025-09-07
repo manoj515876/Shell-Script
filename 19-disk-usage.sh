@@ -2,6 +2,7 @@
 
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=5 #real projects will monitor for 70
+MSG=""
 
 while read -r line 
 do 
@@ -9,6 +10,8 @@ do
     PARTITION=$(echo $line | awk -F " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then 
-        echo "PARTITION : ${PARTITION} , USAGE: ${USAGE}"
+        MSG=$(echo "PARTITION : ${PARTITION} , USAGE: ${USAGE}")
     fi
 done <<< $DISK_USAGE
+
+echo "message : ${MSG}"
