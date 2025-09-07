@@ -6,4 +6,4 @@ DISK_THRESHOLD=5 #real projects will monitor for 70
 while read -r line 
 do 
     echo $line
-done >>> $DISK_USAGE
+done <<< $DISK_USAGE
