@@ -5,5 +5,6 @@ DISK_THRESHOLD=5 #real projects will monitor for 70
 
 while read -r line 
 do 
-    echo $line
+    USAGE=$($line | awk -F " " '{print $6F}')
+    echo $USAGE
 done <<< $DISK_USAGE
